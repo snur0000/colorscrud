@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.set('useUnifiedTopology', true)
-var url = process.env.MONGODB_URI || 'mongodb://localhost:27017/heroku_9h0sbqw6';
+var url = 'mongodb://localhost:27017/skateDB';
 mongoose.connect
 (url, { useNewUrlParser: true }, (err) => {
     if (!err) { console.log('MongoDB Connection Succeeded.') }
