@@ -1,0 +1,24 @@
+<h1>Favorite colors :)</h1>
+
+<a class="btn btn-secondary" href="/colors"><i class="fa fa-plus"></i> Create New</a> 
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Favorite Color</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td style="color: {{this.favColor}};" >{{this.favColor}}</td>
+            
+            <td>
+                <a href="/colors/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                &ThickSpace;
+                <a href="/colors/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

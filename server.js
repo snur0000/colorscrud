@@ -5,7 +5,7 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const bodyparser = require('body-parser');
 
-const skaterController = require('./controllers/skaterController');
+const colorsController = require('./controllers/colorsController');
 
 var app = express();
 app.use(bodyparser.urlencoded({
@@ -16,9 +16,9 @@ app.set('views', path.join(__dirname, '/views/'));
 app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + '/views/layouts/' }));
 app.set('view engine', 'hbs');
 
-var PORT = process.env.PORT  || 3000
+var PORT = 3000;
 app.listen(PORT, () => {
     console.log('Express server started at port : 3000');
 });
 
-app.use('/skater', skaterController);
+app.use('/colors', colorsController);

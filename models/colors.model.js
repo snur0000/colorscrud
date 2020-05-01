@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-var skaterSchema = new mongoose.Schema({
-    fullName: {
+var colorsSchema = new mongoose.Schema({
+    favColor: {
         type: String,
         required: 'This field is required.'
     },
@@ -17,9 +17,9 @@ var skaterSchema = new mongoose.Schema({
 });
 
 // Custom validation for email
-skaterSchema.path('email').validate((val) => {
+colorsSchema.path('email').validate((val) => {
     emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailRegex.test(val);
 }, 'Invalid e-mail.');
 
-mongoose.model('Skater', skaterSchema);
+mongoose.model('Colors', colorsSchema);
