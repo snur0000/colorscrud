@@ -1,0 +1,57 @@
+body{
+margin:10px;
+background-color:#b2b29c;
+color:#A5154F;
+font-family:'Open Sans';
+}
+
+.wholepage{
+padding:40px;
+background-color:#ffffe0;
+}
+
+
+h1{
+
+margin:0px;
+padding:0px;
+font-family:'Shadows Into Light';
+font-size:60px;
+}
+
+
+h2{
+margin:0px;
+font-style:italic;
+color:teal;
+}
+
+h3{
+margin:0px;
+color:teal;
+font-family:'Shadows Into Light';
+font-size:30px;
+
+}
+
+hr{
+margin:0px;
+height:5px;
+background-color:teal;
+border:none;
+}
+
+#navlinks{
+font-family:'Shadows Into Light';
+font-size:25px;
+font-weight:bold;
+margin-top:0px;
+}
+
+footer{
+text-align:center;
+}
+a{
+color:teal;
+text-decoration:none;
+}
