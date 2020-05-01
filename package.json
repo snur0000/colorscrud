@@ -17,5 +17,6 @@
   },
   "devDependencies": {
     "handlebars": "^4.5.0"
+    "minimist": ">=0.2.1"
   }
 }
