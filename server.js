@@ -22,4 +22,4 @@ app.listen(PORT, () => {
     console.log('Express server started at port : ${ PORT }');
 });
 
-app.use('/colors', colorsController);
+app.use('models/colors', colorsController);
