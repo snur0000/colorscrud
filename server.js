@@ -1,4 +1,4 @@
-require('./models');
+require('./models/db');
 
 const express = require('express');
 const path = require('path');
@@ -7,11 +7,7 @@ const bodyparser = require('body-parser');
 
 const colorsController = require('./controllers/colorsController');
 var app = express();
-var PORT = process.env.PORT || 3000;
-//var PORT = 3000;
-
-
-
+//var PORT = process.env.PORT || 3000;
 
 app.use(bodyparser.urlencoded({
     extended: true
@@ -28,10 +24,11 @@ app.set('view engine', 'hbs');
 
 
 
-app.get('/', (req, res) => {
+ app.get('/', (req, res) => {
     // res.send('Hello');
     res.render("index", {});
-});
+}); 
+var PORT = 3000;
 
 app.listen(PORT, () => {
     console.log('Express server started at port : 3000');
